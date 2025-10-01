@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مصحة Selam</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #ADD8E6;
+      --primary-hover: #9ac0d8;
+      --secondary-color: #333;
+      --bg-color: #000;
+      --header-bg: #222;
+      --text-color: #fff;
+      --shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      --transition-speed: 0.3s;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Tajawal', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      text-shadow: var(--shadow);
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+    
+    /* Header Styling */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, var(--header-bg), #444);
+      padding: 12px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    }
+    
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    
+    .header-left img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 2px solid var(--primary-color);
+      transition: transform var(--transition-speed);
+    }
+    
+    .header-left img:hover {
+      transform: scale(1.05);
+    }
+    
+    .header-center {
+      flex: 1;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    
+    .header-right {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .btn {
+      background-color: var(--primary-color);
+      padding: 8px 16px;
+      border-radius: 5px;
+      border: none;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+    
+    .btn:hover {
+      background-color: var(--primary-hover);
+      transform: scale(1.03);
+    }
+    
+    /* Intro Section */
+    .intro-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+      background: linear-gradient(135deg, #444, var(--header-bg));
+    }
+    
+    .intro-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      text-align: justify;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    
+    .intro-big {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary-color);
+      letter-spacing: 0.5px;
+    }
+    
+    /* Doctor Cards Section */
+    .doctor-section {
+      padding: 35px 20px;
+      background: var(--bg-color);
+    }
+    
+    .doctor-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--primary-color);
+      letter-spacing: 0.4px;
+    }
+    
+    .doctor-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    
+    .doctor-card {
+      background-color: var(--secondary-color);
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      min-height: 340px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+    
+    .doctor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.8);
+    }
+    
+    .doctor-card img {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 2px solid var(--primary-color);
+
+
+transition: transform var(--transition-speed);
+      image-rendering: crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      filter: contrast(105%) brightness(110%);
+    }
+    
+    .doctor-card img:hover {
+      transform: scale(1.05);
+    }
+    
+    .doctor-card h3 {
+      margin: 10px 0 8px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--primary-color);
+      letter-spacing: 0.3px;
+    }
+    
+    .doctor-card p {
+      font-size: 13px;
+      margin: 10px 0;
+      flex: 1;
+      text-align: justify;
+      line-height: 1.6;
+      color: #ddd;
+    }
+    
+    .card-buttons {
+      display: flex;
+      width: 100%;
+      gap: 8px;
+      margin-top: auto;
+    }
+    
+    .card-buttons a {
+      flex: 1;
+      text-align: center;
+      background-color: var(--primary-color);
+      padding: 9px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+    
+    .card-buttons a:hover {
+      background-color: var(--primary-hover);
+      transform: scale(1.02);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .intro-container {
+        flex-direction: column;
+      }
+      
+      .header-center {
+        font-size: 15px;
+      }
+      
+      .intro-big {
+        font-size: 28px;
+      }
+      
+      .doctor-section h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="selam.jpg" alt="Logo">
+    </div>
+    <div class="header-center">
+      Your health is our priority, and your comfort is our mission.
+    </div>
+    <div class="header-right">
+      <a href="contact.html" class="btn">Contact</a>
+      <a href="location.html" class="btn">Our Location</a>
+    </div>
+  </header>
+  
+  <!-- Intro Section -->
+  <section class="intro-container">
+    <div class="intro-text">
+      <p>
+        Welcome to Selam Clinic, where we are committed to providing comprehensive healthcare in accordance with
+        the highest standards of quality and professionalism.
+        We strive to offer a comfortable and friendly environment, with a specialized team across various fields to 
+        ensure the best treatment experience.
+      </p>
+    </div>
+    <div class="intro-big">
+      Our Services
+    </div>
+  </section>
+  
+  <!-- Doctor Cards Section -->
+  <section class="doctor-section">
+    <h2>Available Doctor Specialties in the Clinic</h2>
+    <div class="doctor-cards">
+
+      <!-- 1. Eye Doctor -->
+      <div class="doctor-card">
+        <img src="photo_2025-09-30_15-21-28.jpg" alt="Eye Doctor">
+        <h3>Eye Doctor</h3>
+        <p>Specializes in examining, diagnosing, and treating eye diseases, correcting vision, and performing surgeries when necessary.</p>
+        <div class="card-buttons">
+          <a href="booking.html"> Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- 2. ENT Doctor -->
+      <div class="doctor-card">
+        <img src="ent.jpg" alt="ENT Doctor">
+        <h3>ENT Doctor</h3>
+        <p>Diagnoses and treats hearing problems, allergies, sinus infections, and throat conditions.</p>
+        <div class="card-buttons">
+          <a href="booking.html"> Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 3. Heart Surgeon -->
+      <div class="doctor-card">
+        <img src="enf.jpg" alt="Heart Surgeon">
+        <h3>Heart Surgeon</h3>
+        <p>Performs open-heart surgeries and valve repairs using the latest technologies in cardiac care.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+
+
+        </div>
+      </div>
+
+      <!-- 4. Pediatrician -->
+      <div class="doctor-card">
+        <img src="Pediatrician.jpg" alt="Pediatrician">
+        <h3>Pediatrician</h3>
+        <p>Takes care of children's health, treats common childhood illnesses, and monitors growth and development.</p>
+        <div class="card-buttons">
+          <a href="booking.html"> Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 5. Dermatologist -->
+      <div class="doctor-card">
+        <img src="Dermatologist.jpg" alt="Dermatologist">
+        <h3>Dermatologist</h3>
+        <p>Specializes in skin, hair, and nail disorders such as acne, eczema, and psoriasis.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 6. Dentist -->
+      <div class="doctor-card">
+        <img src="Dentist.jpg" alt="Dentist">
+        <h3>Dentist</h3>
+        <p>Provides oral care, treats cavities, performs extractions, and offers cosmetic dental procedures.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 7. General Practitioner -->
+      <div class="doctor-card">
+        <img src="General Practitioner.jpg" alt="General Practitioner">
+        <h3>General Practitioner</h3>
+        <p>Handles general medical consultations, preventive care, and referrals to specialists if needed.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 8. Gynecologist -->
+      <div class="doctor-card">
+        <img src="Gynecologist.jpg" alt="Gynecologist">
+        <h3>Gynecologist</h3>
+        <p>Specialist in women's health, pregnancy, childbirth, and reproductive system disorders.</p>
+        <div class="card-buttons">
+          <a href="booking.html"> Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 9. Psychiatrist -->
+      <div class="doctor-card">
+        <img src="Psychiatrist.jpg" alt="Psychiatrist">
+        <h3>Psychiatrist</h3>
+        <p>Diagnoses and treats mental health conditions such as anxiety, depression, and bipolar disorder.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 10. Neurologist -->
+      <div class="doctor-card">
+        <img src="Neurologist.jpg" alt="Neurologist">
+        <h3>Neurologist</h3>
+        <p>Specializes in brain and nervous system disorders such as epilepsy, stroke, and migraines.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+
+        </div>
+      </div>
+
+      <!-- 11. Orthopedic Surgeon -->
+      <div class="doctor-card">
+        <img src="Orthopedic Surgeon.jpg" alt="Orthopedic Surgeon">
+        <h3>Orthopedic Surgeon</h3>
+        <p>Treats bone fractures, joint injuries, and performs surgeries such as knee and hip replacements.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+          <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+      <!-- 12. Pulmonologist -->
+      <div class="doctor-card">
+        <img src="Pulmonologist.jpg" alt="Pulmonologist">
+        <h3>Pulmonologist</h3>
+        <p>Specializes in respiratory system diseases such as asthma, bronchitis, and chronic lung conditions.</p>
+        <div class="card-buttons">
+          <a href="booking.html">Book Appointment</a>
+           <a href= "doctordetails.html">More Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
+

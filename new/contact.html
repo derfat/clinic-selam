@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>اتصل بنا - مصحة Selam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #ADD8E6;
+      --primary-hover: #9ac0d8;
+      --bg-color: #000;
+      --text-color: #fff;
+      --transition-speed: 0.3s;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Tajawal', sans-serif;
+      text-align: center;
+    }
+    h1 { 
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .contact-info {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: left;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    }
+    .contact-info p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: var(--primary-color);
+      transition: color var(--transition-speed);
+    }
+    .contact-info a:hover { color: var(--primary-hover); }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--primary-color);
+      border-radius: 5px;
+      transition: background var(--transition-speed);
+    }
+    .back:hover { background: var(--primary-hover); }
+  </style>
+</head>
+<body>
+  <h1>Contact us</h1>
+  <div class="contact-info">
+    <p>email : <a href="mailto:info@selamclinic.com">info@selamclinic.com</a></p>
+    <p>phone : <a href="tel:+123456789">+123456789</a></p>
+    <p>facebook <a href="https://facebook.com/selamclinic" target="_blank">facebook.com/selamclinic</a></p>
+    <p>instagram: <a href="https://instagram.com/selamclinic" target="_blank">instagram.com/selamclinic</a></p>
+    
+  </div>
+  <a href="acil.html" class="back">Back to Home page </a>
+</body>
+</html>
